@@ -18,5 +18,10 @@ Route::get('/', function () {
 });
 
 Route::get('/sumup/callback/{data?}', function ($data=null) {
-    return dd($_GET);
+    if (isset($_GET['code']))
+    $access_token = Sumup\OAuth::getToken([
+        'grant_type' => 'authorization_code',
+        'code' => $_GET['code']
+      ]);
+    return dd($access_token);
 });
