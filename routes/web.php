@@ -17,6 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/sumup/callback/{data}', function ($data) {
-    return dd($data);
+Route::get('/sumup/callback/{data?}', function ($data=null) {
+    return dd($_GET);
 });
