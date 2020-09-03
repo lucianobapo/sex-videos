@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1de016bddce360ac383de8b155fa4926",
+    "content-hash": "7e19466d82ef0b411974e4448a94a44f",
     "packages": [
         {
             "name": "alexcode/laravel-sumup",
@@ -838,6 +838,50 @@
                 "url"
             ],
             "time": "2019-07-01T23:21:34+00:00"
+        },
+        {
+            "name": "ilhanet/erpnet-permissions",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lucianobapo/erpnet-permissions.git",
+                "reference": "8eb9be80fe4ac11f6ca73ae87fca3b75468b660c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lucianobapo/erpnet-permissions/zipball/8eb9be80fe4ac11f6ca73ae87fca3b75468b660c",
+                "reference": "8eb9be80fe4ac11f6ca73ae87fca3b75468b660c",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": ">=5",
+                "php": "^7.1.3",
+                "symfony/process": ">=3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ErpNET\\Permissions\\Providers\\ErpnetPermissionsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ErpNET\\Permissions\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Luciano Porto",
+                    "email": "luciano.bapo@gmail.com"
+                }
+            ],
+            "time": "2019-09-27T18:31:24+00:00"
         },
         {
             "name": "laravel/framework",
