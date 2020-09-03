@@ -18,10 +18,16 @@ Route::get('/', function () {
 });
 
 Route::get('/sumup/callback/{data?}', function ($data=null) {
-    if (isset($_GET['code']))
-    $access_token = Sumup\OAuth::getToken([
-        'grant_type' => 'authorization_code',
-        'code' => $_GET['code']
-      ]);
+    dd(config('sumup'));
+    if (isset($_GET['code'])){
+        Sumup\Sumup::setClientSecret(config());
+        Sumup\Sumup::setClientId('MY_CLIENT_ID');
+        Sumup\Sumup::setRedirectUri('MY_OAUTH_REDIRECT');
+        $access_token = Sumup\OAuth::getToken([
+            'grant_type' => 'authorization_code',
+            'code' => $_GET['code']
+          ]);
+    }
+    
     return dd($access_token);
 });
